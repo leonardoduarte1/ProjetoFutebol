@@ -24,7 +24,7 @@ namespace Infraestrutura.Banco
             {
                 var consultaWhere = "";
                 var consulta = "SELECT ";
-                consulta += " id, nome, idestado ";
+                consulta += " id, nome1, idestado ";
                 consulta += " from cidades ";
 
 
