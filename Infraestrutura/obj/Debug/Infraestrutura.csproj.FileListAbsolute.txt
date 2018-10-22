@@ -11,3 +11,6 @@ C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\obj\Debug\Infra
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\obj\Debug\Infraestrutura.pdb
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Debug\Ninject.dll
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Debug\Ninject.xml
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\obj\Debug\Infraestrutura.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\obj\Debug\Infraestrutura.pdb

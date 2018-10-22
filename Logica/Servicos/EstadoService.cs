@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Logica.Servicos
 {
-    public class CidadeService
+    public class EstadoService
     {
-        private CidadeDAO dao = new CidadeDAO();
+        private EstadoDAO dao = new EstadoDAO();
 
         
-        public IList<Cidade> Listar()
+        public IList<Estado> Listar()
         {
             return dao.Listar();
         }

@@ -10,26 +10,26 @@ using System.Threading.Tasks;
 
 namespace Infraestrutura.Banco
 {
-    public class SituacaoPartidaDAO
+    public class PosicaoDAO
     {
         public string dbConnect = ConfigurationManager.ConnectionStrings["conexaoBanco"].ToString();
             
-        public SituacaoPartidaDAO() { }
+        public PosicaoDAO() { }
 
         //public string IdEstado { get; set; }
 
-        public IList<SituacaoPartida> Listar()
+        public IList<Posicao> Listar()
         {
             using (var db = new MySqlConnection(dbConnect))
             {
                 var consultaWhere = "";
                 var consulta = "SELECT ";
-                consulta += " id, descricao ";
-                consulta += " from situacao_partida ";
+                consulta += " id, nome, sigla ";
+                consulta += " from posicoes ";
 
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
 
-                var busca = db.Query<SituacaoPartida>(consulta);
+                var busca = db.Query<Posicao>(consulta);
 
                 return busca.ToList(); 
             }
