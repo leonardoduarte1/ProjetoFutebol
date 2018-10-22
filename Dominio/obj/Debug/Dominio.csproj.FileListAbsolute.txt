@@ -1,1 +1,5 @@
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Dominio\bin\Debug\Dominio.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Dominio\obj\Debug\Dominio.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Dominio\obj\Debug\Dominio.pdb

@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Dapper;
+using Dominio;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,47 +16,26 @@ namespace Infraestrutura.Banco
             
         public TimeDAO() { }
 
-        public void Listar()
+        //public string IdEstado { get; set; }
+
+        public IList<Time> Listar()
         {
-            var db = new MySqlConnection(dbConnect);
-        /*using (var db = new OleDbConnection(dbConnect))
-        {
-            var consultaWhere = "";
-            var consulta = "SELECT ";
-            consulta += " teste ";
-               
-            consulta += " from teste ";
-
-
-            /* -----------------------------------------------------------------------------------------------------		
-                * Filtra pelas regionais vinculadas com as escolas qiue o professor leciona.
-                *-------------------------------------------------------------------------------------------------------	
-            */
-
-            /*
-                if (!String.IsNullOrEmpty(this.Cpf))
-                {
-                    consultaWhere += consultaWhere != "" ? " and " : "";
-                    consultaWhere += " cpf_cnpj = '" + this.Cpf + "' "; // Ativo nas escolas
-                }
-
-
-
+            using (var db = new MySqlConnection(dbConnect))
+            {
+                var consultaWhere = "";
+                var consulta = "SELECT ";
+                consulta += " id, nome, proprietario, ";
+                consulta += " email, telefone, idCidade, ";
+                consulta += " idEstado, emblema, senha ";
+                consulta += " from times ";
 
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
 
-                var busca = db.Query<T>(consulta);
+                var busca = db.Query<Time>(consulta);
 
-
-
-                return busca.OrderByDescending(p => p.DataVencimento); 
-                }
-
-                 */
-
+                return busca.ToList(); 
+            }
 
         }
-
-        
     }
 }

@@ -1,1 +1,13 @@
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Logica.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Logica.pdb
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Dominio.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Infraestrutura.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\MySql.Data.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Dapper.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Dominio.pdb
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Infraestrutura.pdb
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\MySql.Data.xml
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Debug\Dapper.xml
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\obj\Debug\Logica.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\obj\Debug\Logica.pdb

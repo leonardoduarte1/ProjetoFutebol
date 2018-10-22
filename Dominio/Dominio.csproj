@@ -45,6 +45,7 @@
     <Compile Include="Estado.cs" />
     <Compile Include="EventoPartida.cs" />
     <Compile Include="Jogador.cs" />
+    <Compile Include="LocalPartida.cs" />
     <Compile Include="Partida.cs" />
     <Compile Include="Posicao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

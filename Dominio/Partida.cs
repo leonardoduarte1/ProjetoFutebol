@@ -11,9 +11,10 @@ namespace Dominio
         public int Id { get; set; }
         public DateTime data { get; set; }
         public int IdEstadio { get; set; }
-        public int IdTime1 { get; set; }
-        public int IdTime2 { get; set; }
-        public string Vencedor { get; set; }
-        public string Placar { get; set; }
+        public int IdTimeA { get; set; }
+        public int IdTimeB { get; set; }
+        public int IdTimeVencedor { get; set; }
+        public string PlacarTimeA { get; set; }
+        public string PlacarTimeB { get; set; }
     }
 }
