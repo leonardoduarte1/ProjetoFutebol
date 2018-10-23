@@ -14,3 +14,13 @@ C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Debug\Ninje
 C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\obj\Debug\Infraestrutura.csprojResolveAssemblyReference.cache
 C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\obj\Debug\Infraestrutura.dll
 C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\obj\Debug\Infraestrutura.pdb
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Infraestrutura.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Infraestrutura.pdb
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Dapper.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Dominio.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\MySql.Data.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Ninject.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Dominio.pdb
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Dapper.xml
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\MySql.Data.xml
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Infraestrutura\bin\Debug\Ninject.xml

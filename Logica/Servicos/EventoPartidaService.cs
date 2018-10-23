@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Logica.Servicos
 {
-    public class TipoEventoService
+    public class EventoPartidaService
     {
-        private TipoEventoDAO dao = new TipoEventoDAO();
+        private EventoPartidaDAO dao = new EventoPartidaDAO();
 
         
-        public IList<TipoEvento> Listar()
+        public IList<EventoPartida> Listar()
         {
             return dao.Listar();
         }
