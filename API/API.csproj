@@ -149,7 +149,9 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityResolver.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\JogadorController.cs" />
     <Compile Include="Controllers\ParametrosController.cs" />
+    <Compile Include="Controllers\TimeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -13,10 +13,31 @@ namespace Logica.Servicos
     {
         private TimeDAO dao = new TimeDAO();
 
-        
+
         public IList<Time> Listar()
         {
             return dao.Listar();
+        }
+
+        public bool Inserir(Time time)
+        {
+            return dao.Inserir(time);
+        }
+
+        public bool Atualizar(Time time)
+        {
+            return dao.Atualizar(time);
+        }
+
+        public bool Remover(int id)
+        {
+            return dao.Remover(id);
+        }
+
+        public Time BuscarPeloId(int id)
+        {
+
+            return dao.Listar().FirstOrDefault();
         }
 
     }

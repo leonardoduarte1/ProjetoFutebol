@@ -37,5 +37,41 @@ namespace Infraestrutura.Banco
             }
 
         }
+
+        public bool Remover(int id)
+        {
+            using (var db = new MySqlConnection(dbConnect))
+            {
+                
+                var consulta = "DELETE ";
+                consulta += " from times ";
+                consulta += " where id = " + id;
+
+                var linhasAfetadas = db.Execute(consulta);
+
+                return linhasAfetadas > 0;
+            }
+        }
+
+        public bool Atualizar(Time time)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Inserir(Time time)
+        {
+            using (var db = new MySqlConnection(dbConnect))
+            {
+                
+                var consulta = "INSERT INTO ";
+                consulta += " times ";
+                consulta += " values (@Nome, @Proprietario, @Email, @Telefone, @IdBairro, ";
+                consulta += " @IdCidade, @IdEstado, @Emblema, @Senha) ";
+
+                var linhasAfetadas = db.Execute(consulta, time);
+
+                return linhasAfetadas > 0;
+            }
+        }
     }
 }

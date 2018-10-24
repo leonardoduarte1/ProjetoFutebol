@@ -19,5 +19,19 @@ namespace Logica.Servicos
             return dao.Listar();
         }
 
+        public Jogador BuscarPeloId(int id)
+        {
+            return dao.Listar().FirstOrDefault();
+        }
+
+        public bool Remover(int id)
+        {
+            return dao.Remover(id);
+        }
+
+        public bool Inserir(Jogador jogador)
+        {
+            return dao.Inserir(jogador);
+        }
     }
 }

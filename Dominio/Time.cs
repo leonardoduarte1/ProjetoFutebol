@@ -13,7 +13,7 @@ namespace Dominio
         public string Proprietario { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public string Bairro { get; set; }
+        public int IdBairro { get; set; }
         public int IdCidade { get; set; }
         public int IdEstado { get; set; }
         public string Emblema { get; set; }
