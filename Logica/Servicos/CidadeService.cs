@@ -11,11 +11,13 @@ namespace Logica.Servicos
 {
     public class CidadeService
     {
+        public string idEstado;
         private CidadeDAO dao = new CidadeDAO();
 
         
         public IList<Cidade> Listar()
         {
+            dao.IdEstado = this.idEstado;
             return dao.Listar();
         }
 

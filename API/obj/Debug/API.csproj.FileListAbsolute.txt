@@ -132,3 +132,6 @@ C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\API\bin\Dapper.x
 C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\API\obj\Debug\API.csprojResolveAssemblyReference.cache
 C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\API\obj\Debug\API.dll
 C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\API\obj\Debug\API.pdb
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\API\bin\System.Web.Cors.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\API\bin\System.Web.Http.Cors.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\API\bin\System.Web.Http.Cors.xml

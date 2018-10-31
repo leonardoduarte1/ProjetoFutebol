@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TimeController : ApiController
     {
         private TimeService _svTime;
@@ -26,13 +28,18 @@ namespace API.Controllers
         }
 
         // GET: api/Time/5
-        public Time Get(int id)
+        public Time Get(string id)
         {
             return this._svTime.BuscarPeloId(id);
         }
 
+        public Time Get(string email, string senha)
+        {
+            return this._svTime.BuscarPeloEmailESenha(email, senha);
+        }
+
         // POST: api/Time
-        public bool Post([FromBody]Time time)
+        public bool Post(Time time)
         {
             return _svTime.Inserir(time);
         }

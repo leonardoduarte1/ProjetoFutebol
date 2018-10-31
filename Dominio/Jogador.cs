@@ -14,5 +14,6 @@ namespace Dominio
         public string Telefone { get; set; }
         public int IdPosicao { get; set; }
         public int IdTime { get; set; }
+
     }
 }

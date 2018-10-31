@@ -13,9 +13,11 @@ namespace Logica.Servicos
     {
         private JogadorDAO dao = new JogadorDAO();
 
-        
+        public string IdTime { get; set; }
+
         public IList<Jogador> Listar()
         {
+            dao.IdTime = this.IdTime;
             return dao.Listar();
         }
 

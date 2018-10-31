@@ -34,11 +34,17 @@ namespace Logica.Servicos
             return dao.Remover(id);
         }
 
-        public Time BuscarPeloId(int id)
+        public Time BuscarPeloId(string id)
         {
-
+            dao.Id = id;
             return dao.Listar().FirstOrDefault();
         }
 
+        public Time BuscarPeloEmailESenha(string email, string senha)
+        {
+            dao.Email = email;
+            dao.Senha = senha;
+            return dao.Listar().FirstOrDefault();
+        }
     }
 }

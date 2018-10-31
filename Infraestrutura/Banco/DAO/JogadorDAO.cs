@@ -13,7 +13,9 @@ namespace Infraestrutura.Banco
     public class JogadorDAO
     {
         public string dbConnect = ConfigurationManager.ConnectionStrings["conexaoBanco"].ToString();
-            
+
+        public string IdTime { get; set; }
+
         public JogadorDAO() { }
 
         //public string IdEstado { get; set; }
@@ -28,6 +30,12 @@ namespace Infraestrutura.Banco
                 consulta += " telefone, idPosicao, ";
                 consulta += " idTime ";
                 consulta += " from jogadores ";
+
+                if (!String.IsNullOrEmpty(this.IdTime))
+                {
+                    consultaWhere += consultaWhere != "" ? " and " : "";
+                    consultaWhere += " idTime = " + this.IdTime; // Ativo nas escolas
+                }
 
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
 
