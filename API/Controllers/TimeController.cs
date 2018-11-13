@@ -21,9 +21,12 @@ namespace API.Controllers
         {
             this._svTime = _svTime;
         }
-        // GET: api/Time
-        public IList<Time> Get()
+        // GET: api/Time/Listar
+        [HttpGet Route("api/Time/Listar")]
+        public IList<Time> Listar(string idNao = null, string inicioConsulta = null)
         {
+            this._svTime.idNao = idNao;
+            this._svTime.inicioConsulta = inicioConsulta; 
             return this._svTime.Listar();
         }
 

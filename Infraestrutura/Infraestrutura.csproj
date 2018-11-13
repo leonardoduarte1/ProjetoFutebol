@@ -65,8 +65,8 @@
     <Compile Include="Banco\DAO\PosicaoDAO.cs" />
     <Compile Include="Banco\DAO\SituacaoPartidaDAO.cs" />
     <Compile Include="Banco\DAO\TipoEventoDAO.cs" />
-    <Compile Include="Banco\DAO\EventoPartidaDAO.cs" />
     <Compile Include="Banco\DAO\PartidaDAO.cs" />
+    <Compile Include="Banco\DAO\EventoPartidaDAO.cs" />
     <Compile Include="Banco\DAO\LocalPartidaDAO.cs" />
     <Compile Include="Banco\DAO\JogadorDAO.cs" />
     <Compile Include="Banco\DAO\TimeDAO.cs" />

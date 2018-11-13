@@ -24,12 +24,16 @@ namespace Infraestrutura.Banco
         {
             using (var db = new MySqlConnection(dbConnect))
             {
+                db.Open();
+
                 var consultaWhere = "";
-                var consulta = "SELECT ";
-                consulta += " id, nome, email, ";
-                consulta += " telefone, idPosicao, ";
-                consulta += " idTime ";
-                consulta += " from jogadores ";
+                var consulta = @"SELECT ";
+                consulta += " j.id, j.nome, j.email, ";
+                consulta += " j.telefone, j.idPosicao, ";
+                consulta += " j.idTime, Posicao.sigla, Posicao.nome ";
+                consulta += " from jogadores j ";
+                consulta += " inner join posicoes Posicao ";
+                consulta += " on j.idPosicao = Posicao.Id ";
 
                 if (!String.IsNullOrEmpty(this.IdTime))
                 {
@@ -39,7 +43,13 @@ namespace Infraestrutura.Banco
 
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
 
-                var busca = db.Query<Jogador>(consulta);
+                var busca = db.Query<Jogador, Posicao, Jogador>(consulta, 
+                    (jogador, posicao) => 
+                    {
+                        jogador.Posicao = posicao;
+                        return jogador;
+                    },
+                    splitOn: "idPosicao");
 
                 return busca.ToList(); 
             }

@@ -10,32 +10,32 @@ using System.Threading.Tasks;
 
 namespace Infraestrutura.Banco
 {
-    public class PartidaDAO
+    public class EventoPartidaDAO
     {
         public string dbConnect = ConfigurationManager.ConnectionStrings["conexaoBanco"].ToString();
             
-        public PartidaDAO() { }
+        public EventoPartidaDAO() { }
 
         //public string IdEstado { get; set; }
 
-        public IList<Partida> Listar()
+        public IList<EventoPartida> Listar()
         {
             using (var db = new MySqlConnection(dbConnect))
             {
                 var consultaWhere = "";
                 var consulta = "SELECT ";
-                consulta += " id, data, idLocalPartida, ";
-                consulta += " idTimeA, idTimeB, idTimeVencedor, ";
-                consulta += " placarTimeA, placarTimeB ";
-                consulta += " from partidas ";
+                consulta += " id, idTipoEvento, idJogador, ";
+                consulta += " idPartida ";
+                consulta += " from evento_partida ";
 
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
 
-                var busca = db.Query<Partida>(consulta);
+                var busca = db.Query<EventoPartida>(consulta);
 
                 return busca.ToList(); 
             }
 
         }
+       
     }
 }

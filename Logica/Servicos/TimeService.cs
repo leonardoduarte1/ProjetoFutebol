@@ -12,10 +12,13 @@ namespace Logica.Servicos
     public class TimeService
     {
         private TimeDAO dao = new TimeDAO();
-
+        public string inicioConsulta;
+        public string idNao;
 
         public IList<Time> Listar()
         {
+            dao.idNao = idNao;
+            dao.inicioConsulta = inicioConsulta;
             return dao.Listar();
         }
 

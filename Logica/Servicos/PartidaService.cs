@@ -19,5 +19,17 @@ namespace Logica.Servicos
             return dao.Listar();
         }
 
+        public bool Remover(int id)
+        {
+            return dao.Remover(id);
+        }
+
+        public bool Inserir(Partida partida)
+        {
+            partida.Data = DateTime.Parse(partida.DataPartida);
+
+            return dao.Inserir(partida);
+        }
+
     }
 }
