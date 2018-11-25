@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -45,6 +46,26 @@ namespace API.Controllers
         public bool Post(Time time)
         {
             return _svTime.Inserir(time);
+        }
+
+        [HttpPost Route("api/Time/Upload")]
+        public HttpResponseMessage Upload()
+        {
+            var httpRequest = HttpContext.Current.Request;
+            if (httpRequest.Files.Count < 1)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+
+            foreach (string file in httpRequest.Files)
+            {
+                var postedFile = httpRequest.Files[file];
+                var filePath = HttpContext.Current.Server.MapPath("~/emblemas/" + postedFile.FileName + ".jpg");
+                postedFile.SaveAs(filePath);
+                // NOTE: To store in memory use postedFile.InputStream
+            }
+
+            return Request.CreateResponse(HttpStatusCode.Created);
         }
 
         // PUT: api/Time/5

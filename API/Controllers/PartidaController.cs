@@ -28,22 +28,29 @@ namespace API.Controllers
             return this._svPartida.Listar();
         }
 
-        // GET: api/Time/5
-       /* public Partida Get(string id)
+        [HttpGet Route("api/Partida/PreencherSumula/{idTime}")]
+        public Partida PreencherSumula(string idTime)
         {
-            return this._svPartida.BuscarPeloId(id);
-        } */
+            return this._svPartida.PreencherSumula(idTime);
+        }
 
-        
+        [HttpGet Route("api/Partida/AlterarSituacao")]
+        public bool AlterarSituacao(string idPartida, string idSituacao)
+        {
+            return this._svPartida.AlterarSituacao(idPartida, idSituacao);
+        }
+
+
         // POST: api/Time
         public bool Post(Partida partida)
         {
             return _svPartida.Inserir(partida);
         }
 
-        // PUT: api/Time/5
-        public void Put(int id, [FromBody]Partida value)
+        [HttpPut Route("api/Partida/Encerrar/{id}")]
+        public bool Encerrar(string id, [FromBody]Partida partida)
         {
+            return _svPartida.Encerrar(id, partida);
         }
 
         // DELETE: api/Time/5

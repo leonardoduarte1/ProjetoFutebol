@@ -32,7 +32,7 @@ namespace Infraestrutura.Banco
                 var consultaWhere = "";
                 var consulta = "SELECT ";
                 consulta += " t.id, t.nome, t.proprietario, ";
-                consulta += " t.email, t.telefone, t.emblema, t.senha Senha,";
+                consulta += " t.email, t.telefone, t.emblema, ";
                 consulta += " t.dataCriacao, t.idBairro, t.idCidade, t.idEstado, ";
                 consulta += " b.id, b.nome, c.id, c.nome, e.id, e.sigla ";
                 consulta += " from times t ";

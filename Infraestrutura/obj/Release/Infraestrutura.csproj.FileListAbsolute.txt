@@ -1,0 +1,13 @@
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Infraestrutura.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Infraestrutura.pdb
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Dapper.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Dominio.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\MySql.Data.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Ninject.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Dominio.pdb
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Dapper.xml
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\MySql.Data.xml
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\bin\Release\Ninject.xml
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\obj\Release\Infraestrutura.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\obj\Release\Infraestrutura.dll
+C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Infraestrutura\obj\Release\Infraestrutura.pdb

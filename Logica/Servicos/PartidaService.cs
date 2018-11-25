@@ -19,6 +19,25 @@ namespace Logica.Servicos
             return dao.Listar();
         }
 
+        public Partida PreencherSumula(string idTime)
+        {
+            dao.SelecaoEspecifica.Add("verificaSePossuiJogo");
+            dao.IdTime = idTime;
+            return dao.Listar().FirstOrDefault();
+        }
+
+        public bool PossuiSumula(string idTime)
+        {
+            dao.IdTime = idTime;
+            return dao.PossuiSumula();
+        }
+
+        public bool AlterarSituacao(string id, string situacao)
+        {
+            return dao.AlterarSituacao(id, situacao);
+        }
+
+
         public bool Remover(int id)
         {
             return dao.Remover(id);
@@ -31,5 +50,9 @@ namespace Logica.Servicos
             return dao.Inserir(partida);
         }
 
+        public bool Encerrar(string id, Partida partida)
+        {
+            return dao.Encerrar(id, partida.PlacarTimeA, partida.PlacarTimeB, partida.IdTimeVencedor);
+        }
     }
 }

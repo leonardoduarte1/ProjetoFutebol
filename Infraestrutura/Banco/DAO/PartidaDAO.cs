@@ -13,7 +13,9 @@ namespace Infraestrutura.Banco
     public class PartidaDAO
     {
         public string dbConnect = ConfigurationManager.ConnectionStrings["conexaoBanco"].ToString();
-            
+        public IList<string> SelecaoEspecifica = new List<string>();
+
+        public string IdTime { get; set; }
         public PartidaDAO() { }
 
         //public string IdEstado { get; set; }
@@ -40,9 +42,19 @@ namespace Infraestrutura.Banco
                 consulta += "          INNER JOIN ";
                 consulta += "     situacao_partida s ON p.idSituacao = s.id ";
 
-
+                if (SelecaoEspecifica.Contains("verificaSePossuiJogo"))
+                {
+                    consultaWhere += consultaWhere != "" ? " and " : "";
+                    consultaWhere += " (idTimeA = " + this.IdTime + " OR idTimeB = " + this.IdTime + ") ";
+                    consultaWhere += " AND idTimeVencedor IS NULL ";
+                    consultaWhere += "  AND data < NOW() ";
+                    consultaWhere += "  AND p.idSituacao = 3 ";
+                }
+ 
+        
+       
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
-
+                consulta += " order by data desc ";
                 var busca = db.Query<Partida, LocalPartida, Time, Time, SituacaoPartida, Partida>(consulta,
                     (partida, localPartida, timeA, timeB, situacaoPartida) =>
                     {
@@ -59,6 +71,32 @@ namespace Infraestrutura.Banco
 
         }
 
+        public bool PossuiSumula()
+        {
+            using (var db = new MySqlConnection(dbConnect))
+            {
+                var consultaWhere = "";
+                var consulta = "SELECT ";
+                consulta += "    id ";
+                consulta += " FROM ";
+                consulta += "     partidas p ";
+                consulta += " where (idTimeA = " + this.IdTime + " OR idTimeB = " + this.IdTime + ") ";
+                consulta += " AND idTimeVencedor IS NULL ";
+                consulta += "  AND data < NOW() ";
+                consulta += "  AND p.idSituacao = 3 ";
+
+
+
+                consulta += consultaWhere != "" ? " where " + consultaWhere : "";
+
+                var busca = db.Query<Partida>(consulta);
+
+                return busca.Count() > 0;
+            }
+
+        }
+
+
         public bool Inserir(Partida partida)
         {
             using (var db = new MySqlConnection(dbConnect))
@@ -74,6 +112,39 @@ namespace Infraestrutura.Banco
                 return linhasAfetadas > 0;
             }
         }
+
+        public bool AlterarSituacao(string id, string situacao)
+        {
+            using (var db = new MySqlConnection(dbConnect))
+            {
+
+                var consulta = "update partidas set ";
+                consulta += " idSituacao = " + situacao;
+                consulta += " where id = " + id;
+                var linhasAfetadas = db.Execute(consulta);
+
+                return linhasAfetadas > 0;
+            }
+        }
+
+        public bool Encerrar(string id, string placarA, string placarB, int idTimeVencedor)
+        {
+            var vencedor = Convert.ToString(idTimeVencedor);
+            using (var db = new MySqlConnection(dbConnect))
+            {
+
+                var consulta = "update partidas set ";
+                consulta += " placarTimeA = " + placarA + ", ";
+                consulta += " placarTimeB = " + placarB + ", ";
+                consulta += " idTimeVencedor = " + (vencedor == "0" ? "null" : vencedor) + ", ";
+                consulta += " idSituacao = 4 ";
+                consulta += " where id = " + id;
+                var linhasAfetadas = db.Execute(consulta);
+
+                return linhasAfetadas > 0;
+            }
+        }
+
 
         public bool Remover(int id)
         {
