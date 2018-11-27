@@ -19,5 +19,11 @@ namespace Logica.Servicos
             return dao.Listar();
         }
 
+        public bool Inserir(Classificacao classificacao)
+        {
+            
+            return dao.Inserir(classificacao);
+        }
+
     }
 }

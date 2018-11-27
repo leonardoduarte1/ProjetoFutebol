@@ -34,6 +34,12 @@ namespace API.Controllers
             return this._svPartida.PreencherSumula(idTime);
         }
 
+        [HttpGet Route("api/Partida/Convites/{idTime}")]
+        public IList<Partida> Convites(string idTime)
+        {
+            return this._svPartida.Convites(idTime);
+        }
+
         [HttpGet Route("api/Partida/AlterarSituacao")]
         public bool AlterarSituacao(string idPartida, string idSituacao)
         {

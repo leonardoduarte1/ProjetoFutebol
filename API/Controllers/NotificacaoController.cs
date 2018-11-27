@@ -27,6 +27,13 @@ namespace API.Controllers
             return this._svPartida.PossuiSumula(idTime);
         }
 
+        // GET: api/Notificacao
+        [HttpGet Route("api/notificacao/pendente/{idTime}")]
+        public bool Pendente(string idTime)
+        {
+            return this._svPartida.PossuiJogoPendente(idTime);
+        }
+
         // GET: api/Notificacao/5
         public string Get(int id)
         {

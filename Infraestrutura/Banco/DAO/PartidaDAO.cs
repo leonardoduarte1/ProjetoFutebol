@@ -45,14 +45,21 @@ namespace Infraestrutura.Banco
                 if (SelecaoEspecifica.Contains("verificaSePossuiJogo"))
                 {
                     consultaWhere += consultaWhere != "" ? " and " : "";
-                    consultaWhere += " (idTimeA = " + this.IdTime + " OR idTimeB = " + this.IdTime + ") ";
+                    consultaWhere += " idTimeA = " + this.IdTime + " ";
                     consultaWhere += " AND idTimeVencedor IS NULL ";
                     consultaWhere += "  AND data < NOW() ";
                     consultaWhere += "  AND p.idSituacao = 3 ";
                 }
- 
-        
-       
+
+                if (SelecaoEspecifica.Contains("retornaPartidasPendentes"))
+                {
+                    consultaWhere += consultaWhere != "" ? " and " : "";
+                    consultaWhere += "  idTimeB = " + this.IdTime + " ";
+                    consultaWhere += "  AND p.idSituacao = 2 ";
+                }
+
+
+
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
                 consulta += " order by data desc ";
                 var busca = db.Query<Partida, LocalPartida, Time, Time, SituacaoPartida, Partida>(consulta,
@@ -67,6 +74,29 @@ namespace Infraestrutura.Banco
                     splitOn: "id");
 
                 return busca.ToList(); 
+            }
+
+        }
+
+        public bool PossuiJogoPendente()
+        {
+            using (var db = new MySqlConnection(dbConnect))
+            {
+                var consultaWhere = "";
+                var consulta = "SELECT ";
+                consulta += "    id ";
+                consulta += " FROM ";
+                consulta += "     partidas p ";
+                consulta += " where idTimeB = " + this.IdTime + " ";
+                consulta += " AND p.idSituacao = 2 ";
+
+
+
+                consulta += consultaWhere != "" ? " where " + consultaWhere : "";
+
+                var busca = db.Query<Partida>(consulta);
+
+                return busca.Count() > 0;
             }
 
         }

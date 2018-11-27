@@ -161,6 +161,7 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityResolver.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClassificacaoController.cs" />
     <Compile Include="Controllers\JogadorController.cs" />
     <Compile Include="Controllers\NotificacaoController.cs" />
     <Compile Include="Controllers\ParametrosController.cs" />

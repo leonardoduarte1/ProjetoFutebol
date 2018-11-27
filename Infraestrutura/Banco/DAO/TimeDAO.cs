@@ -34,6 +34,8 @@ namespace Infraestrutura.Banco
                 consulta += " t.id, t.nome, t.proprietario, ";
                 consulta += " t.email, t.telefone, t.emblema, ";
                 consulta += " t.dataCriacao, t.idBairro, t.idCidade, t.idEstado, ";
+                consulta += " cl.pontualidade, cl.fairplay, cl.nivelTecnico, ";
+                consulta += " floor(SUM(cl.pontualidade + cl.fairplay + cl.nivelTecnico) / 3) geral, ";
                 consulta += " b.id, b.nome, c.id, c.nome, e.id, e.sigla ";
                 consulta += " from times t ";
                 consulta += " inner join bairros b ";
@@ -42,6 +44,9 @@ namespace Infraestrutura.Banco
                 consulta += " on t.idCidade = c.Id ";
                 consulta += " inner join estados e ";
                 consulta += " on t.idEstado = e.Id ";
+                consulta += " inner join classificacao cl ";
+                consulta += " on cl.idTime = t.id ";
+
 
                 if (!String.IsNullOrEmpty(this.Id))
                 {

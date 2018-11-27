@@ -32,11 +32,23 @@ namespace Logica.Servicos
             return dao.PossuiSumula();
         }
 
+        public bool PossuiJogoPendente(string idTime)
+        {
+            dao.IdTime = idTime;
+            return dao.PossuiJogoPendente();
+        }
+
         public bool AlterarSituacao(string id, string situacao)
         {
             return dao.AlterarSituacao(id, situacao);
         }
 
+        public IList<Partida> Convites(string idTime)
+        {
+            dao.SelecaoEspecifica.Add("retornaPartidasPendentes");
+            dao.IdTime = idTime;
+            return dao.Listar();
+        }
 
         public bool Remover(int id)
         {
