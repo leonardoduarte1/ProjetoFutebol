@@ -28,6 +28,20 @@ namespace API.Controllers
             return this._svPartida.Listar();
         }
 
+        [HttpGet Route("api/Partida/Historico/{idTime}")]
+        public IList<Partida> Historico(string idTime)
+        {
+            return this._svPartida.Historico(idTime);
+        }
+
+
+        [HttpGet Route("api/Partida/Ultimas")]
+        public IList<Partida> Ultimas()
+        {
+            return this._svPartida.Ultimas();
+        }
+
+
         [HttpGet Route("api/Partida/PreencherSumula/{idTime}")]
         public Partida PreencherSumula(string idTime)
         {

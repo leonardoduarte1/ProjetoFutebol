@@ -26,6 +26,9 @@ namespace Infraestrutura.Banco
             {
                 var consultaWhere = "";
                 var consulta = "SELECT ";
+
+                
+
                 consulta += "     p.id, p.data, p.idLocalPartida, p.idTimeA, p.idTimeB, p.idTimeVencedor, p.idSituacao, ";
                 consulta += "     p.placarTimeA, p.placarTimeB, ";
                 consulta += "     lp.id, lp.nome, ta.id, ta.nome, ta.emblema, ta.proprietario,  ";
@@ -58,10 +61,24 @@ namespace Infraestrutura.Banco
                     consultaWhere += "  AND p.idSituacao = 2 ";
                 }
 
+                if (SelecaoEspecifica.Contains("historico"))
+                {
+                    consultaWhere += consultaWhere != "" ? " and " : "";
+                    consultaWhere += "  (idTimeA = " + this.IdTime + " or idTimeB = " + this.IdTime + ") ";
+                    consultaWhere += "  AND p.idSituacao = 4 ";
+                }
+
+                
 
 
                 consulta += consultaWhere != "" ? " where " + consultaWhere : "";
                 consulta += " order by data desc ";
+
+                if (SelecaoEspecifica.Contains("ultimas"))
+                {
+                    consulta += " LIMIT 10 ";
+                }
+
                 var busca = db.Query<Partida, LocalPartida, Time, Time, SituacaoPartida, Partida>(consulta,
                     (partida, localPartida, timeA, timeB, situacaoPartida) =>
                     {

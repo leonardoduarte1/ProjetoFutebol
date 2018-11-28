@@ -19,6 +19,20 @@ namespace Logica.Servicos
             return dao.Listar();
         }
 
+        public IList<Partida> Historico(string idTime)
+        {
+            dao.IdTime = idTime;
+            dao.SelecaoEspecifica.Add("historico");
+            return dao.Listar();
+        }
+
+        public IList<Partida> Ultimas()
+        {
+            dao.SelecaoEspecifica.Add("ultimas");
+            return dao.Listar();
+        }
+        
+
         public Partida PreencherSumula(string idTime)
         {
             dao.SelecaoEspecifica.Add("verificaSePossuiJogo");
