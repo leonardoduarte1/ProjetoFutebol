@@ -19,7 +19,7 @@ namespace Infraestrutura.Banco
         public string Id { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        
+        public string Nome { get; set; }
 
         public TimeDAO() { }
 
@@ -61,6 +61,12 @@ namespace Infraestrutura.Banco
                 {
                     consultaWhere += consultaWhere != "" ? " and " : "";
                     consultaWhere += " t.Senha = '" + this.Senha + "' "; // Ativo nas escolas
+                }
+
+                if (!String.IsNullOrEmpty(this.Nome))
+                {
+                    consultaWhere += consultaWhere != "" ? " and " : "";
+                    consultaWhere += " t.nome like %" + this.Nome + "% "; // Ativo nas escolas
                 }
 
                 if (!String.IsNullOrEmpty(this.idNao))

@@ -43,6 +43,7 @@
     <Compile Include="Interfaces\IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicos\BairroService.cs" />
+    <Compile Include="Servicos\EstatisticaService.cs" />
     <Compile Include="Servicos\PartidaService.cs" />
     <Compile Include="Servicos\LocalPartidaService.cs" />
     <Compile Include="Servicos\EventoPartidaService.cs" />

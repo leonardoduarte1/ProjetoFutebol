@@ -15,10 +15,13 @@ namespace Logica.Servicos
         public string inicioConsulta;
         public string idNao;
 
+        public string nome;
+
         public IList<Time> Listar()
         {
             dao.idNao = idNao;
             dao.inicioConsulta = inicioConsulta;
+            dao.Nome = nome;
             return dao.Listar();
         }
 
