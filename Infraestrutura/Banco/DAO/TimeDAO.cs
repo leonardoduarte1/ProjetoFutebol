@@ -66,7 +66,7 @@ namespace Infraestrutura.Banco
                 if (!String.IsNullOrEmpty(this.Nome))
                 {
                     consultaWhere += consultaWhere != "" ? " and " : "";
-                    consultaWhere += " t.nome like %" + this.Nome + "% "; // Ativo nas escolas
+                    consultaWhere += " t.nome like '%" + this.Nome + "%' "; // Ativo nas escolas
                 }
 
                 if (!String.IsNullOrEmpty(this.idNao))
