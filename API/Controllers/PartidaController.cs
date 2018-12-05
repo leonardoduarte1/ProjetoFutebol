@@ -54,6 +54,19 @@ namespace API.Controllers
             return this._svPartida.Convites(idTime);
         }
 
+        [HttpGet Route("api/Partida/ConvitesEnviados/{idTime}")]
+        public IList<Partida> ConvitesEnviados(string idTime)
+        {
+            return this._svPartida.ConvitesEnviados(idTime);
+        }
+
+        [HttpGet Route("api/Partida/Proximas/{idTime}")]
+        public IList<Partida> Proximas(string idTime)
+        {
+            return this._svPartida.Proximas(idTime);
+        }
+
+
         [HttpGet Route("api/Partida/AlterarSituacao")]
         public bool AlterarSituacao(string idPartida, string idSituacao)
         {

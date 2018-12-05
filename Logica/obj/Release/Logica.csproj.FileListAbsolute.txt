@@ -11,3 +11,16 @@ C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\bin\Release\Dapper.xml
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\obj\Release\Logica.csprojResolveAssemblyReference.cache
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\obj\Release\Logica.dll
 C:\Users\Leonardo\Documents\GitHub\ProjetoFutebol\Logica\obj\Release\Logica.pdb
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Logica.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Logica.pdb
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Dominio.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Infraestrutura.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\MySql.Data.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Dapper.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Dominio.pdb
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Infraestrutura.pdb
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\MySql.Data.xml
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\bin\Release\Dapper.xml
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\obj\Release\Logica.csprojResolveAssemblyReference.cache
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\obj\Release\Logica.dll
+C:\Users\leonardo.silva\Desktop\ProjetoFaculdade\ProjetoFutebol\Logica\obj\Release\Logica.pdb

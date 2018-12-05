@@ -64,10 +64,27 @@ namespace Logica.Servicos
             return dao.Listar();
         }
 
+        public IList<Partida> ConvitesEnviados(string idTime)
+        {
+            dao.SelecaoEspecifica.Add("convitesEnviados");
+            dao.IdTime = idTime;
+            return dao.Listar();
+        }
+
+        public IList<Partida> Proximas(string idTime)
+        {
+            dao.SelecaoEspecifica.Add("proximasPartidas");
+            dao.IdTime = idTime;
+            return dao.Listar();
+        }
+
+       
         public bool Remover(int id)
         {
             return dao.Remover(id);
         }
+
+      
 
         public bool Inserir(Partida partida)
         {

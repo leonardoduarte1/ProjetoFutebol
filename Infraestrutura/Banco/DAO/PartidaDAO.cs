@@ -61,6 +61,21 @@ namespace Infraestrutura.Banco
                     consultaWhere += "  AND p.idSituacao = 2 ";
                 }
 
+                if (SelecaoEspecifica.Contains("convitesEnviados"))
+                {
+                    consultaWhere += consultaWhere != "" ? " and " : "";
+                    consultaWhere += "  idTimeA = " + this.IdTime + " ";
+                    consultaWhere += "  AND (p.idSituacao = 2 or p.idSituacao = 3) ";
+                }
+
+                if (SelecaoEspecifica.Contains("proximasPartidas"))
+                {
+                    consultaWhere += consultaWhere != "" ? " and " : "";
+                    consultaWhere += "  (idTimeA = " + this.IdTime + " or idTimeB = " + this.IdTime + ") ";
+                    consultaWhere += "  AND p.idSituacao = 3 ";
+                    consultaWhere += "  AND data > NOW() ";
+                }
+
                 if (SelecaoEspecifica.Contains("historico"))
                 {
                     consultaWhere += consultaWhere != "" ? " and " : "";
